@@ -1,0 +1,41 @@
+package com.webblog.app.ws.mobileappws.ui.request.models;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+public class User {
+	@NotBlank(message = "firstName cannot be empty")
+	private String firstName;
+	@NotBlank(message = "lastName cannot be empty")
+	private String lastName;
+	@Email(message = "email not in correct format")
+	private String email;
+	@Size(min =8,max=18,message = "password size not correct")
+	private String password;
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+}
