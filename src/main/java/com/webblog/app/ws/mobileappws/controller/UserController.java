@@ -29,6 +29,17 @@ public class UserController {
 	
 	//TODO: create Service Class and utility class for UUID generator
 	
+	
+	@GetMapping("/status/check")
+	public String getStatus() {
+		return "Working";
+	}
+	
+	@PostMapping("/status/check")
+	public String getStatus2() {
+		return "Working";
+	}
+	
 	@GetMapping(
 			produces = {
 					MediaType.APPLICATION_XML_VALUE,
